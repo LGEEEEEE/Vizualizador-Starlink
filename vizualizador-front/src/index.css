@@ -1,0 +1,16 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Mata qualquer barra de rolagem */
+  background-color: #1a1a1a;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

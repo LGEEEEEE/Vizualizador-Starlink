@@ -15,7 +15,7 @@ app.use('/api', (req, res, next) => {
     const clientIp = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
     
     // Regra de Ouro: Libera localhost (seu PC) OU qualquer dispositivo na rede 192.168.1.X
-    if (clientIp.includes('192.168.1.') || clientIp.includes('127.0.0.1') || clientIp === '::1') {
+        if (clientIp.includes('192.168.1.') || clientIp.includes('127.0.0.1') || clientIp.includes('::1') || clientIp.includes('100.')) {
         next(); // Pode passar!
     } else {
         console.log(`🚫 Acesso bloqueado. IP Fora da Rede: ${clientIp}`);
